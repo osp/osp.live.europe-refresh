@@ -8,7 +8,7 @@ fi
 cd ../../osp.work.visual-grammar
 for COMMIT in $(git log --oneline $FILE | cut -f 1 -d " "); do 
   git checkout $COMMIT $FILE;
-  cp $FILE $FOLDER/$i-$COMMIT-$FILE;
-  $inkscape --export-png=$FOLDER/$i-$COMMIT-$FILE.png --export-dpi=18 $FOLDER/$i-$COMMIT-$FILE
+#cp $FILE $FOLDER/$i-$COMMIT-$FILE;
+  $inkscape --export-png=$FOLDER/$i-$COMMIT-$FILE.png --export-dpi=18.5 $FOLDER/$i-$COMMIT-$FILE
   (( i = i + 1 ))
 done
